@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Insert title</title>
+        <style>
+            label{
+                font-size:14px;/*글자 크기*/
+                line-height:50px;/*줄 간격*/
+            }
+            label em{
+                color:red;
+                font-weight:800px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="search.jsp" method="post">
+            <fieldset>
+                <label for="user_id"><em>아이디</em></label>
+                <input type="text" id="user_id" size="10">
+                <label for="user_pw"><em>패스워드</em></label>
+                <input type="password" id="user_pw" size="10">
+                <input type="submit" value="login">
+            </fieldset>
+        </form>
+    </body>
+</html>

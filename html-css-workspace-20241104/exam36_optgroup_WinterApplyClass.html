@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Insert title</title>
+        <style>
+            body{
+                background-color: rgba(183,185,174,0.283);
+            }
+            form fieldset{
+                margin-bottom: 25px;
+            }
+            form legend{
+                font-size: 15px;
+                font-weight: 600px;
+            }
+            .reg{
+                font-size: 14px;
+                width: 110px;
+                color: rgb(79, 0, 153);
+                font-weight:bold;
+                float : left;
+                text-align: right;
+                margin-right:10px;
+            }
+            form ul li{
+                list-style: none;
+                margin:15px 0;
+                font-size:14px;
+            }
+            h1{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>겨울방학 특강 신청</h1>
+        <form>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label class="reg" for="id">이름</label>
+                        <input type="text" id="id" autofocus>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label class="reg" for="uname">학번</label>
+                        <input type="text" id="uname">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label class="reg" for="class">학과</label>
+                        <select id="class" multiple>
+                            <optgroup label="공과대학">
+                                <option value="archi">건축공학과</option>
+                                <option value="mechanic">기계공학과</option>
+                                <option value="indust">산업공학과</option>
+                                <option value="elec">전기공학과</option>
+                                <option value="computer" selected>컴퓨터공학과</option>
+                                <option value="chemical">화학공학과</option>
+                            </optgroup>
+                            <optgroup label="인문대학">
+                                <option value="history">사학과</option>
+                                <option value="lang">어문학과</option>
+                                <option value="philo">철학과</option>
+                            </optgroup>
+                        </select>    
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </body>
+</html>

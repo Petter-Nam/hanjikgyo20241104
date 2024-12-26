@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Insert title here</title>
+        <style>
+            body{
+                background-color:pink;
+            }
+            .div-bg{
+                width:50%;
+                background-color:coral;
+            }
+            .div-test{
+                background-color:white;
+                margin:30px;
+                padding:20px;
+                width:20%;
+                border:5px dashed black;
+                float:left;
+            }
+
+            /*
+                background-clip:요소의 배경이 어떤 영역까지 확장될지를 정의
+                
+                padding-box : 배경이 콘텐츠 영역과 패딩 영역까지 확장되며, 테두리는 포함되지 않는다.
+                content-box : 배경이 오직 콘텐츠 영역에만 적용되고 패딩과 테두리는 포함되지 않는다.
+            */
+
+            /* border-box : 배경은 요소의 전체 영역에 걸쳐 표시 요소의 패딩(padding)과 테두리(border)까지 포함하여 배경에 적용
+                즉 배경은 컨텐츠 영역, 패딩 영역, 테두리 영역까지 모두 포함*/
+            #div1{
+                background-clip:border-box;
+            }
+            #div2{
+                background-clip:padding-box;
+            }
+            #div3{
+                background-clip: content-box;
+            }
+
+            #div-img{
+                width:70%;
+                height:800px;
+                background-image:url('../resource/image/bgsample.png');
+                background-repeat: repeat;/*기본값*/
+                background-repeat: repeat-x;/*가로만 이미지 반복*/
+                background-repeat: repeat-y;/*세로만 이미지 반복*/
+                background-repeat: no-repeat;/*반복 없이 이미지 하나*/
+                background-size : auto; /*사진 크기 기준 기본값*/
+                background-size : contain; /*사진으로 공간 채우기*/
+                background-size : cover; /*사진 공간 기준을 채우기*/
+                background-size : 80% 80%; /*개발자 지정값*/
+
+                background-position:50% 50%;
+                background-position: right top;
+                background-position: center top;
+                background-position: left bottom;
+
+                background-attachment: scroll;
+                /*background-attachment : fixed;*/
+                
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>배경 관련 스타일</h1>
+        <h3>배경색 적용하기</h3>
+        <pre>body{background-color:색상}</pre>
+        <hr>
+        <h3>div 배경 적용하기</h3>
+        <p>div 영역을 설정하여 배경색을 div에 별도로 지정한다.</p>
+        <div id="div-bg">
+            감사원의 조직 직무범위 감사위원의 자격 감사대상 공무원의
+            범위 기타 필요한 사항은 법률로 정한다. 국회는 국무총리 또는
+            국무위원의 해임을 대통령에게 건의 할 수 있다.
+        </div>
+        <h3>배경의 적용 선택하기</h3>
+        <p>
+            배경의 영역을 설정할 때 배경 색상 뿐만 아니라 배경색의 범위도 
+            설정할 수 있다.
+        </p>
+        <div id="div1" class="div-test">
+            감사원의 조직 직무범위 감사위원의 자격 감사대상 공무원의
+            범위 기타 필요한 사항은 법률로 정한다. 국회는 국무총리 또는
+            국무위원의 해임을 대통령에게 건의 할 수 있다.
+        </div>
+        <div id="div2" class="div-test">
+            감사원의 조직 직무범위 감사위원의 자격 감사대상 공무원의
+            범위 기타 필요한 사항은 법률로 정한다. 국회는 국무총리 또는
+            국무위원의 해임을 대통령에게 건의 할 수 있다.
+        </div>
+        <div id="div3" class="div-test">
+            감사원의 조직 직무범위 감사위원의 자격 감사대상 공무원의
+            범위 기타 필요한 사항은 법률로 정한다. 국회는 국무총리 또는
+            국무위원의 해임을 대통령에게 건의 할 수 있다.
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h3>배경 이미지 적용하기</h3>
+        <p>
+            background-image속성을 사용하여 배경 사진을 넣을 수 있고
+            사진의 크기에 따라 반복 여부(바둑판식)를 설정할 수 있고
+            배경을 자를 수도 있다
+        </p>
+        <div id="div-img"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
